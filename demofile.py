@@ -1,4 +1,10 @@
-print("hello world")
-print("goodbye world")
+from flask import Flask
+import requests
+app = Flask(__name__)
 
-#testing to see if this updates on github 2024 12/28
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run()
